@@ -4,7 +4,7 @@ const domain = process.env.NEXT_PUBLIC_APP_URL;
 
 export const sendTwoFactorTokenEmail = async (email: string, token: string) => {
   await resend.emails.send({
-    from: "Ixu <noreply@ixuapps.online>",
+    from: "Ixu <affanahmed809@gmail.com>",
     to: email,
     subject: "2FA Code",
     html: `<p>Your 2FA code: ${token}</p>`,
@@ -15,7 +15,7 @@ export const sendPasswordResetEmail = async (email: string, token: string) => {
   const resetLink = `${domain}/auth/new-password?token=${token}`;
 
   await resend.emails.send({
-    from: "Ixu <noreply@ixuapps.online>",
+    from: "Ixu <affanahmed809@gmail.com>",
     to: email,
     subject: "Reset your password",
     react: Email({ url: resetLink, titleEmail:"Reset Password" }),
@@ -27,7 +27,7 @@ export const sendVerificationEmail = async (email: string, token: string) => {
   const confirmLink = `${domain}/auth/new-verification?token=${token}`;
 
   await resend.emails.send({
-    from: "Ixu <noreply@ixuapps.online>",
+    from: "Ixu <affanahmed809@gmail.com>",
     to: email,
     subject: "Confirm your email",
     react: Email({ url: confirmLink, titleEmail:"Verification Account" }),
